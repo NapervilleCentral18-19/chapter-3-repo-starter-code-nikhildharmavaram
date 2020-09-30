@@ -12,114 +12,150 @@ import javax.swing.*;
 import java.util.StringTokenizer;
 import java.util.Scanner;
 
-import java.io.*;		//for File IO
+import java.io.*;       //for File IO
 
 public class ch3notes
 {
-	Integer one = 1;
-	enum Classes  {CalculusAB, English, SpanishIII, Gym, Lunch, APCS, APush, Photo}
-	enum Grades {A,B,C,D,F}
-	enum Week {Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday}
+    Integer one = 1;
+    enum Classes  {CalculusAB, English, SpanishIII, Gym, Lunch, APCS, APush, Photo}
+    enum Grades {A,B,C,D,F}
+    enum Week {Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday}
 
-	  public static void main (String [] args) throws IOException // required for File IO
+      public static void main (String [] args) throws IOException // required for File IO
    {
-	   DecimalFormat fmt = new DecimalFormat ("0.###");
-	   Integer two = 2;
-	   Grades mygrade = Grades.A;
-	   Grades yourgrade = Grades.B;
-	   System.out.println(yourgrade.compareTo( mygrade) );
-	   String[] people = {"Deepa", "Trevor", "Murugan", "Emy",
-	   					  "Thomas", "Charlie",
-						  "heinz doofenshmirtz", "Michael",
-						  "NoOne", "Bueller","Justin","David"};
+       DecimalFormat fmt = new DecimalFormat ("0.###");
+       Integer two = 2;
+       Grades mygrade = Grades.A;
+       Grades yourgrade = Grades.B;
+       System.out.println(yourgrade.compareTo( mygrade) );
+       String[] people = {"Deepa", "Trevor", "Murugan", "Emy",
+                          "Thomas", "Charlie",
+                          "heinz doofenshmirtz", "Michael",
+                          "NoOne", "Bueller","Justin","David"};
+
+       String word1 = new String("apple");
+       String word2 = "cat";
+       String word3 = "dog";
+       String word = new String("apple");
+       
+       if (word1.compareTo(word2) < 0)
+       {
+        System.out.println(word1+ " is before "+ word2);
+        }
+       else if (word1.compareTo(word2) > 0)
+       {
+        System.out.println(word1 + " is after "+ word2);
+       }
+       else
+       {
+           System.out.println(word1 + " is equal " + word2);
+       }
+       /*
+       //if (x == 5)
+       // {
+        //do something if true
+       //}
+       
+       //if (word == word1)//test is the same object thus the same address in memory
+       if (word.equals(word1))//boolean
+       {
+           System.out.println("Hey we are the same!!");
+       }
+       else
+       {
+           System.out.println("Hey we are different!!");
+       }
+       
+       if (word.compareTo(word1) == 0)
+        System.out.println("Hey we are the same!!");//one statement linked to the if
+        System.out.println(word +"--"+word1);
+        
+       
+
+   /*    int wordCount = 0, characterCount = 0;
+             String line, word;
+             StringTokenizer tokenizer;
+
+             System.out.println ("Please enter text");
+
+             line = Keyboard.readString();
+
+                tokenizer = new StringTokenizer (line,"/");
 
 
-
-
-/*    int wordCount = 0, characterCount = 0;
-	         String line, word;
-	         StringTokenizer tokenizer;
-
-	         System.out.println ("Please enter text");
-
-	         line = Keyboard.readString();
-
-	            tokenizer = new StringTokenizer (line,"/");
-
-
-	   	x = Integer.parseInt(input);
-	   	System.out.print(x);
+        x = Integer.parseInt(input);
+        System.out.print(x);
 
 
 
 
 
 /* WHAT WILL OUTPUT?
-	int k =0, j=0;
+    int k =0, j=0;
 
-	System.out.println("k \tj");
+    System.out.println("k \tj");
 
-	for(j=0; j<20; j+=k)
-	{
-		k++;
-		System.out.println(k + "\t" + j);
-	}
+    for(j=0; j<20; j+=k)
+    {
+        k++;
+        System.out.println(k + "\t" + j);
+    }
 
-	System.out.println("After the loop \n k= " +k +"\tj= " +j);
+    System.out.println("After the loop \n k= " +k +"\tj= " +j);
 
 
 /*
-	Scanner scanFile = new Scanner(new File("people.txt"));
-	String name, address, phone;
+    Scanner scanFile = new Scanner(new File("people.txt"));
+    String name, address, phone;
 
-	while(scanFile.hasNext())
-	{
+    while(scanFile.hasNext())
+    {
 
-	}
+    }
 
 
 
 /**/
 
 
-	//Scanner scanFile = new Scanner(new File ("state of the union 2011.txt"));
+    //Scanner scanFile = new Scanner(new File ("state of the union 2011.txt"));
 
-	//Scanner scanFile = new Scanner
-	//	(new File ("data\\obamatakebackamerica.txt"));
-	//Scanner scanFile = new Scanner
-	//(new File ("data\\Debate12016.txt"));
-	//Scanner scanFile = new Scanner(new File ("jimmy carter a crisis of confidence.txt"));
+    //Scanner scanFile = new Scanner
+    //  (new File ("data\\obamatakebackamerica.txt"));
+    //Scanner scanFile = new Scanner
+    //(new File ("data\\Debate12016.txt"));
+    //Scanner scanFile = new Scanner(new File ("jimmy carter a crisis of confidence.txt"));
 
 /*
-	String word;
-	int count_p = 0, count_y = 0, count_n = 0, count_words = 0, count_j = 0;
+    String word;
+    int count_p = 0, count_y = 0, count_n = 0, count_words = 0, count_j = 0;
 
-	while ()
-	{
-
-
-		//count_words ++;
-
-		//System.out.println(word  );
+    while ()
+    {
 
 
+        //count_words ++;
 
-	}//end of while
+        //System.out.println(word  );
+
+
+
+    }//end of while
 
 
 //_______________________basic for and scope of i________________________
 /**/
-		//ini
-		//middle
-		//body
-		//last
-     	// ini          test     inc
-/*	for(int i = 0 ; i < 20 ; i++ )
-	{
-		System.out.print("Hi" + i + "\n");
-	}
+        //ini
+        //middle
+        //body
+        //last
+        // ini          test     inc
+/*  for(int i = 0 ; i < 20 ; i++ )
+    {
+        System.out.print("Hi" + i + "\n");
+    }
 
-	//System.out.print("After the Loop" + i + "\n");
+    //System.out.print("After the Loop" + i + "\n");
 
 
 
@@ -128,33 +164,33 @@ public class ch3notes
 
 /*
 
-	int test;
-	System.out.println("Guess my favorite number \n" +
-							"it is between 1-20");
-	test = Keyboard.nextInt();
+    int test;
+    System.out.println("Guess my favorite number \n" +
+                            "it is between 1-20");
+    test = Keyboard.nextInt();
 
-	while (test != -9999)
-	{
-		if (test == 12)
-			System.out.println
-				("it the age of my sons"+
-				" Thomas and Charlie");
-		else
-			System.out.println("Guess again, or -9999 to end the program");
+    while (test != -9999)
+    {
+        if (test == 12)
+            System.out.println
+                ("it the age of my sons"+
+                " Thomas and Charlie");
+        else
+            System.out.println("Guess again, or -9999 to end the program");
 
-		test = Keyboard.nextInt();
+        test = Keyboard.nextInt();
 
-	}
+    }
 
 
 
-/*	int i =0;//#1
+/*  int i =0;//#1
 
-		while (i<10)//#2
-		{
-			System.out.print( "i =" + i +"\n");
-			i++;//#3
-		}
+        while (i<10)//#2
+        {
+            System.out.print( "i =" + i +"\n");
+            i++;//#3
+        }
 
 
 
