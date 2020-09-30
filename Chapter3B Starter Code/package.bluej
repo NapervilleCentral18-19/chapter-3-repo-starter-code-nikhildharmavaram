@@ -1,0 +1,23 @@
+#BlueJ package file
+package.editor.height=470
+package.editor.width=759
+package.editor.x=60
+package.editor.y=60
+package.numDependencies=0
+package.numTargets=2
+package.showExtends=true
+package.showUses=true
+project.charset=UTF-8
+target1.height=62
+target1.name=e03
+target1.type=PackageTarget
+target1.width=80
+target1.x=90
+target1.y=10
+target2.height=50
+target2.name=ch3notes
+target2.showInterface=false
+target2.type=ClassTarget
+target2.width=80
+target2.x=280
+target2.y=60
