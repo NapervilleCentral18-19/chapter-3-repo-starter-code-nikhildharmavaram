@@ -24,6 +24,7 @@ public class ch3notes
       public static void main (String [] args) throws IOException // required for File IO
    {
        DecimalFormat fmt = new DecimalFormat ("0.###");
+       Scanner keyboard = new Scanner(System.in);
        Integer two = 2;
        Grades mygrade = Grades.A;
        Grades yourgrade = Grades.B;
@@ -33,10 +34,53 @@ public class ch3notes
                           "heinz doofenshmirtz", "Michael",
                           "NoOne", "Bueller","Justin","David"};
 
-       String word1 = new String("apple");
-       String word2 = "cat";
-       String word3 = "dog";
        String word = new String("apple");
+       String word1 = "cat";
+       String word2 = "dog";
+       String word3 = new String("apple");
+       
+       System.out.println("Enter 3 numbers");
+       int x = keyboard.nextInt();
+       int y = keyboard.nextInt();
+       int z = keyboard.nextInt();
+       
+       if (x > y)
+       { if (x > z)
+           { System.out.println(x + " is the maximum number ");
+            }
+         else
+         { System.out.println(x + " is not the maximum number ");
+            }
+        }
+       else if (y > z)
+       { if (y > x)
+           { System.out.println(y + " is the maximum number ");
+            }
+         else
+         {  System.out.println(y + " is not the maximum number ");
+            }
+        }
+       else if (z > y)
+       { if (z > x)
+           { System.out.println(z + " is the maximum number ");
+            }
+         else
+         { System.out.println(z + " is not the maximum number ");
+            }
+        }
+       //logical OR is ||, logical and is &&
+       /*if (x > y && x > z)
+       { System.out.println(x + " is the maximum");
+        }
+       else if (y > x && y > z)
+       { System.out.println(y + " is the maximum");}
+       else if (z > x && z > y)
+       { System.out.println(z + " is the maximum");
+        }
+        
+       
+       
+       /*
        
        if (word1.compareTo(word2) < 0)
        {
