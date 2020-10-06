@@ -23,7 +23,19 @@ public class ch3notes
 
       public static void main (String [] args) throws IOException // required for File IO
    {
-       DecimalFormat fmt = new DecimalFormat ("0.###");
+       final double TOLERANCE = .001;
+       double num, num1, num2;
+       num1 = .01*1 + .05*2 + .1*3 + .25*4; //bit off
+       num2 = 500.0/900;
+       System.out.println("num1 " + num1);
+       System.out.println("num2 " + num2);
+       if (Math.abs(num1 - num2) < TOLERANCE)
+       { System.out.println("equal");
+        }
+        else
+        { System.out.println("not equal");
+        }
+       /*DecimalFormat fmt = new DecimalFormat ("0.###");
        Scanner keyboard = new Scanner(System.in);
        Integer two = 2;
        Grades mygrade = Grades.A;
@@ -44,7 +56,7 @@ public class ch3notes
        int y = keyboard.nextInt();
        int z = keyboard.nextInt();
        
-       if (x > y)
+       /*if (x > y)
        { if (x > z)
            { System.out.println(x + " is the maximum number ");
             }
