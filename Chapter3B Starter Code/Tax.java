@@ -31,5 +31,10 @@ public class Tax
             double tax2 = 25000 * 0.02;
             double tax3 = (income - 75000) * 0.03;
         }
+        else if (income >= 100000 && income < 250000)
+        {
+            double tax1 = 50000 * 0.01;
+            double tax2 = 25000 * 0.02;
+        }
     }
 }
