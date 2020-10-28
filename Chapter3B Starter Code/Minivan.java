@@ -20,7 +20,7 @@ public class Minivan
             right = false;
             left = false;
         }
-        else if (switches.charAt(2) == '1' && (switches.charAt(4) == '1' || switches.charAt(5) == '1'))
+        else if (switches.charAt(2) == '1' && switches.charAt(4) == '1' && switches.charAt(5) == '1')
         {
             right = false;
             left = false;
