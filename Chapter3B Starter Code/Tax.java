@@ -1,9 +1,9 @@
 
 /**
- * Write a description of class Tax here.
+ * Calculates tax in 1913
  *
- * @author (your name)
- * @version (a version number or a date)
+ * Nikhil Dharmavaram
+ * 10/30/20
  */
 import java.util.Scanner;
 public class Tax

@@ -1,9 +1,9 @@
 
 /**
- * Write a description of class Minivan here.
+ * Minivan switch control
  *
- * @author (your name)
- * @version (a version number or a date)
+ * Nikhil Dharmavaram
+ * @10/25/20
  */
 import java.util.Scanner;
 public class Minivan
@@ -11,54 +11,60 @@ public class Minivan
     public static void main(String args[])
     {
         String switches;
-        boolean right, left;
+        boolean right, left; 
+        // when right = true right door is open
+        //when left = true left door is open
         Scanner keyboard = new Scanner(System.in);
         System.out.print("Enter your switches: ");
         switches = keyboard.next();
-        if (switches.charAt(7) != 'P' || switches.charAt(3) == '0')
+        if (switches.charAt(8) != 'P' || switches.charAt(3) == '0') //gear + master unlock
         {
             right = false;
             left = false;
         }
-        else if (switches.charAt(2) == '1' && switches.charAt(4) == '1' && switches.charAt(5) == '1')
+        else if (switches.charAt(2) == '1') //childlock
         {
-           right = false;
-           left = false;
+           if (switches.charAt(2) == '1' && switches.charAt(4) == '1' && switches.charAt(6) == '0')
+           {
+               left = false;
+           }
+           else
+           {
+               left = true;
+           }
+           if (switches.charAt(2) == '1' && switches.charAt(5) == '1' && switches.charAt(6) == '0')
+           {
+              right = false; 
+           }
+           else
+           {
+              right = true; 
+           }
         }
-        else if (switches.charAt(2) == '1' && (switches.charAt(0) == '1' || switches.charAt(6) == '1') && (switches.charAt(1) == '1' || switches.charAt(7) == '1'))
-        {
-          right = true;
-          left = true;
-        }
-        else if (switches.charAt(2) == '1' && ((switches.charAt(0) == '1' || switches.charAt(6) == '1') || (switches.charAt(1) == '1' || switches.charAt(7) == '1')))
-        
-        {
-            if (switches.charAt(0) == '1' || switches.charAt(6) == '1')
-            {
-                right = false;
-                left = true;
-            }
-            else
-            {
-                right = true;
-                left = false;
-            }
-        }
-        else if ((switches.charAt(0) == '1' && switches.charAt(1) == '1') || (switches.charAt(4) == '1' && switches.charAt(5) == '1') || (switches.charAt(6) == '1' && switches.charAt(7) == '1'))
+        else if ((switches.charAt(0) == '1' || switches.charAt(6) == '1' || switches.charAt(4) == '1') && (switches.charAt(1) == '1' || switches.charAt(7) == '1' || switches.charAt(5) == '1'))
         {
             right = true;
-            left = true;
-        }
-        else if (switches.charAt(0) == '1' || switches.charAt(4) == '1' || switches.charAt(6) == '1')
-        {
-            right = false;
             left = true;
         }
         else
         {
-            right = true;
-            left = false;
-        }
+            if (switches.charAt(0) == '1' || switches.charAt(4) == '1' || switches.charAt(6) == '1')
+            {
+                left = true;
+            }
+            else
+            {
+                left = false;
+            }
+            if (switches.charAt(1) == '1' || switches.charAt(5) == '1' || switches.charAt(7) == '1')
+            {
+                right = true;
+            }
+            else
+            {
+                right = false;
+            }
+        } // tests each door
         
         if (right == false && left == false)
             System.out.println("Neither door opens");
@@ -68,7 +74,7 @@ public class Minivan
             System.out.println("Left door opens");
         else
             System.out.println("Both doors open");
-            
+        //prints based on flag outputs
         
     }
 }
