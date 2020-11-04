@@ -201,17 +201,18 @@ public class ch3notes
 
 //_______________________basic for and scope of i________________________
 /**/
-        //ini
-        //middle
-        //body
-        //last
-        // ini          test     inc
-/*  for(int i = 0 ; i < 20 ; i++ )
+        //ini#1A once only
+        //middle#1 boolean test - exec if true
+        //body#2 execute the body of the loop
+        //last # counter
+        //can declare multiple variables of same type, cannot different types
+        //ini        test     inc
+/**/  for(int i = 0 ; i < 20 ; i++ )
     {
         System.out.print("Hi" + i + "\n");
     }
 
-    //System.out.print("After the Loop" + i + "\n");
+    //System.out.print("After the Loop" + i + "\n"); //scope of i is in the loop
 
 
 
@@ -240,17 +241,21 @@ public class ch3notes
 
 
 
-/*  int i =0;//#1
+/**/  int i =0;//#1 //ini
 
-        while (i<10)//#2
+        while (i<10)//#2 boolean test
         {
             System.out.print( "i =" + i +"\n");
-            i++;//#3
+            i++;//#3 increment
         }
 
 
-
-
+i = 10;
+do //will always execute once, post test loop
+{
+    System.out.print( "i =" + i +"\n");
+}
+while (i < 10);
 
 /*  */
 
