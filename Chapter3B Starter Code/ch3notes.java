@@ -197,6 +197,16 @@ public class ch3notes
 
 
     }//end of while
+    /**/
+    Scanner in = new Scanner(System.in);
+    while (in.hasNextInt())
+    {
+        int input = in.nextInt();
+        System.out.println("eco-" + input);
+    }
+    System.out.println("loop over");
+    
+    
 
 
 //_______________________basic for and scope of i________________________

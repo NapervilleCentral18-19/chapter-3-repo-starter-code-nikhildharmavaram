@@ -24,7 +24,8 @@ public class SumEvenNumbers
       while (j < 101)
       {
          sum += j;
-         j++;
+         j += 2;
       }
+      System.out.println(sum);
    }
 }
