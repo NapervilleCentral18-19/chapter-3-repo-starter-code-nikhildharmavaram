@@ -23,7 +23,7 @@ public class ch3notes
 
       public static void main (String [] args) throws IOException // required for File IO
    {
-       final double TOLERANCE = .001;
+       /*final double TOLERANCE = .001;
        double num, num1, num2;
        num1 = .01*1 + .05*2 + .1*3 + .25*4; //bit off
        num2 = 500.0/900;
@@ -174,31 +174,36 @@ public class ch3notes
 /**/
 
 
-    //Scanner scanFile = new Scanner(new File ("state of the union 2011.txt"));
+    Scanner scanFile = new Scanner(new File ("state of the union 2011.txt"));
 
     //Scanner scanFile = new Scanner
-    //  (new File ("data\\obamatakebackamerica.txt"));
+     //(new File ("data\\obamatakebackamerica.txt"));
     //Scanner scanFile = new Scanner
     //(new File ("data\\Debate12016.txt"));
     //Scanner scanFile = new Scanner(new File ("jimmy carter a crisis of confidence.txt"));
 
-/*
+/**/
     String word;
     int count_p = 0, count_y = 0, count_n = 0, count_words = 0, count_j = 0;
 
-    while ()
+    while (scanFile.hasNext()) //until EOF
     {
+        scanFile.next();//moves the iterator through the file
 
+        count_words ++;
 
-        //count_words ++;
-
-        //System.out.println(word  );
+        System.out.println(word  );
 
 
 
     }//end of while
+    System.out.println("The total number of words is" + count_words);
+    if (word.equals("we") || word.equals("us"))
+    {
+        count_p++;
+    }
     /**/
-    Scanner in = new Scanner(System.in);
+    /*Scanner in = new Scanner(System.in);
     while (in.hasNextInt())
     {
         int input = in.nextInt();

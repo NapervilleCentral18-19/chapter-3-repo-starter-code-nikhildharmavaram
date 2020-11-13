@@ -15,10 +15,10 @@ public class AdjacentDuplicates
       String inputs = "";
       while(in.hasNextInt())
       {
-         input = String.valueOf(in.nextInt());
+         input = String.valueOf(in.nextInt()); //converts input to string
          inputs += input;
       }
-      for (int i = 0; i < inputs.length(); i++)
+      for (int i = 0; i < inputs.length() - 1; i++)
       {
         if (inputs.charAt(i) == inputs.charAt(i+1))
         {
